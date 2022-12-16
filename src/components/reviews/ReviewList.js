@@ -25,9 +25,7 @@ const ReviewList = (props) => {
   const sortedReviews = sortReviews(props.reviews, isSortingAscending);
 
   const changeSortingHandler = () => {
-    navigate(location.pathname, {
-      search: `?sort=${isSortingAscending ? "desc" : "asc"}`,
-    });
+    navigate({search: `?sort=${isSortingAscending ? "desc" : "asc"}`}, { replace: true });
   };
 
   return (
