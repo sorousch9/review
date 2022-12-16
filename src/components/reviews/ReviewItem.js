@@ -6,9 +6,7 @@ const ReviewItem = (props) => {
   return (
     <li className={classes.item}>
       <figure>
-        <blockreview>
-          <p>{props.text}</p>
-        </blockreview>
+        <p>{props.text}</p>
         <figcaption>{props.author}</figcaption>
       </figure>
       <Link className="btn" to={`/reviews/${props.id}`}>
